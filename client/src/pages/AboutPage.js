@@ -1,6 +1,6 @@
 // src/pages/AboutPage.js
 import React from 'react';
-import { Container, Typography, Box, Grid, Card, CardContent, Divider, Paper } from '@mui/material';
+import { Container, Typography, Box, Grid, Card, CardContent, Paper } from '@mui/material';
 import SchoolIcon from '@mui/icons-material/School';
 import AutoStoriesIcon from '@mui/icons-material/AutoStories';
 import GroupsIcon from '@mui/icons-material/Groups';
