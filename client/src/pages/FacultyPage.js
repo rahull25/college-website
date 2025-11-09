@@ -14,7 +14,7 @@ import {
   ListItem,
   ListItemIcon,
   ListItemText,
-  
+  Divider,
   Paper
 } from '@mui/material';
 // import PersonIcon from '@mui/icons-material/Person';
@@ -165,7 +165,7 @@ function FacultyPage() {
                     </Typography>
                   </Box>
 
-                  {/* <Divider sx={{ my: 2 }} /> */}
+                  <Divider sx={{ my: 2 }} />
 
                   <List dense>
                     <ListItem>
@@ -206,7 +206,7 @@ function FacultyPage() {
                     </ListItem>
                   </List>
 
-                  {/* <Divider sx={{ my: 2 }} /> */}
+                  <Divider sx={{ my: 2 }} />
 
                   <Typography variant="subtitle2" gutterBottom>
                     Key Achievements:
