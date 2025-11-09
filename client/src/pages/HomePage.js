@@ -67,11 +67,13 @@ function HomePage() {
   useEffect(() => {
     // Auto-advance slides
     const slideInterval = setInterval(() => {
+      // Use slides.length in the calculation
       setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, 5000);
 
     // Auto-advance news ticker
     const newsInterval = setInterval(() => {
+      // Use news.length in the calculation
       setCurrentNewsIndex((prev) => (prev + 1) % news.length);
     }, 3000);
 
@@ -79,7 +81,7 @@ function HomePage() {
       clearInterval(slideInterval);
       clearInterval(newsInterval);
     };
-  }, []);
+  }, [slides.length, news.length]); // <--- FIX APPLIED: Added missing dependencies
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);

@@ -22,7 +22,7 @@ import ComputerIcon from '@mui/icons-material/Computer';
 import EngineeringIcon from '@mui/icons-material/Engineering';
 import ArchitectureIcon from '@mui/icons-material/Architecture';
 import BiotechIcon from '@mui/icons-material/Biotech';
-// The 'ElectricalServicesIcon' component has been removed from the imports.
+// The 'ElectricalServicesIcon' component has been removed (as per previous step)
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 
 function AcademicsPage() {
@@ -237,9 +237,6 @@ function AcademicsPage() {
                   <Typography variant="h6" gutterBottom>
                     Research Opportunities
                   </Typography>
-                  {/*
-                    *** FIX APPLIED HERE: The extra CardContent tag was removed. ***
-                  */}
                   <Typography variant="body2">
                     State-of-the-art research facilities and collaboration opportunities
                     with national and international institutions.
