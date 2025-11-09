@@ -15,7 +15,6 @@ import {
   ListItemIcon,
   ListItemText,
   Paper
-  // The 'Divider' component has been removed from this import statement
 } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import SchoolIcon from '@mui/icons-material/School';
@@ -23,7 +22,7 @@ import ComputerIcon from '@mui/icons-material/Computer';
 import EngineeringIcon from '@mui/icons-material/Engineering';
 import ArchitectureIcon from '@mui/icons-material/Architecture';
 import BiotechIcon from '@mui/icons-material/Biotech';
-import ElectricalServicesIcon from '@mui/icons-material/ElectricalServices';
+// The 'ElectricalServicesIcon' component has been removed from the imports.
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 
 function AcademicsPage() {
@@ -238,6 +237,9 @@ function AcademicsPage() {
                   <Typography variant="h6" gutterBottom>
                     Research Opportunities
                   </Typography>
+                  {/*
+                    *** FIX APPLIED HERE: The extra CardContent tag was removed. ***
+                  */}
                   <Typography variant="body2">
                     State-of-the-art research facilities and collaboration opportunities
                     with national and international institutions.
