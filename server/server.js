@@ -8,8 +8,11 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Middleware
-app.use(cors()); // Enable Cross-Origin Resource Sharing
-app.use(express.json()); // Allow server to accept/parse JSON
+const clientURL = process.env.CLIENT_URL || '*'; // allow all by default (safe for dev)
+app.use(cors({
+  origin: clientURL,
+}));
+app.use(express.json()); // Parse JSON bodies
 
 // Connect to MongoDB
 mongoose.connect(process.env.MONGO_URI, {
@@ -25,18 +28,10 @@ app.get('/', (req, res) => {
 });
 
 // --- API Routes ---
-// This tells the server: "For any URL starting with /api/departments,
-// use the rules defined in departmentRoutes.js"
-app.use('/api/departments', require('./routes/departmentRoutes'));
 app.use('/api/departments', require('./routes/departmentRoutes'));
 app.use('/api/faculty', require('./routes/facultyRoutes'));
 app.use('/api/events', require('./routes/eventRoutes'));
 app.use('/api/enquiry', require('./routes/enquiryRoutes'));
-
-// We will add other routes (faculty, events) here later
-// app.use('/api/faculty', require('./routes/facultyRoutes'));
-// app.use('/api/events', require('./routes/eventRoutes'));
-// app.use('/api/enquiry', require('./routes/enquiryRoutes'));
 
 // Start the server
 app.listen(PORT, () => {
