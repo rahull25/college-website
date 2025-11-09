@@ -15,6 +15,7 @@ import {
   ListItemIcon,
   ListItemText,
   Paper
+  // The 'Divider' component has been removed from this import statement
 } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import SchoolIcon from '@mui/icons-material/School';
